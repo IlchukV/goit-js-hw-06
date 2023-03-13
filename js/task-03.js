@@ -12,3 +12,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+//шукаємо тег ul
+const galleryRef = document.querySelector('.gallery');
+
+//добавляємо стилі
+galleryRef.style.display = 'flex';
+galleryRef.style.listStyle = 'none';
+galleryRef.style.gap = '20px';
+
+//створюємо масив шаблонних рядків і об'єднуємо їх .join('');
+const imagesListRef = images.map(({url, alt}) => 
+  `<li> <img src = ${url} alt = ${alt} width ='360'/></li>`).join('');
+
+  //вставляємо в документ за допомогою методу insertAdjacentHTML
+galleryRef.insertAdjacentHTML(`afterbegin`, imagesListRef);
+console.log(galleryRef);
+
