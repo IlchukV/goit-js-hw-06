@@ -10,7 +10,7 @@ const elCounterRef = counterRef.querySelector(`#value`);
 const incrementBtnRef = counterRef.lastElementChild
 // console.log(incrementBtnRef);
 
-let counter = `0`;
+let counter = 0;
 
 decrementBtnRef.addEventListener(`click`, handleDecrementButtonClick);
 

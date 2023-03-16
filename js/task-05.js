@@ -7,8 +7,9 @@ const refs = {
 refs.input.addEventListener(`input`, onInputChange);
 
 function onInputChange(event) {
-    console.log(event.currentTarget.value);
-    (event.currentTarget.value != ``) ? refs.namelabel.textContent = event.currentTarget.value : refs.namelabel.textContent = `Anonymous`
+   
+    (event.currentTarget.value != ``) ? refs.namelabel.textContent = event.currentTarget.value : refs.namelabel.textContent = `Anonymous`;
+    console.log(refs.namelabel.textContent);
    
 }
 
